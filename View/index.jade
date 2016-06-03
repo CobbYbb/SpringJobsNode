@@ -1,0 +1,15 @@
+html
+	head
+		body
+			-each item in title
+				li
+					a(href='/main/'+item)=item
+		p
+			=description
+		form(action='/main' method='post')
+			'title'
+			input(type='text' name='title')
+			'description'
+			input(type='text' name='description')
+
+			input(type='submit', value='전송')
